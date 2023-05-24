@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    height: -webkit-fill-available;
+  }
+
+  body {
+    background-image: url('../images/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'BadbBoyzFont', sans-serif,'MarvelFont','IronmanFont' ,'AmericancaptainFont','NationalChampion-Bold'; /* Use a fallback font name */
+  }
+  
+  
+
+  /* If using React, set height on the root div as well */
+  #root {
+    height: -webkit-fill-available;
+  }
+}
+
+@layer utilities {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .contract-metadata {
+    background-color: rgba(38, 199, 210, 0.39); /* Change color and opacity here */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+  
+  .mint-box {
+    background-color: rgba(2, 11, 12, 0.99); /* Increase opacity */
+    border: 1px solid rgba(111, 118, 9, 0.533);/* box border glow */
+    box-shadow: 0 0 10px rgba(86, 54, 182, 0.5);
+    color: rgb(161, 27, 27);
+    padding: 20px; /* Add padding */
+  }
+
+  .custom-web3-button.web3-button {
+    /* Add your custom styles here */
+    width: 20px;
+    height: 500px;
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 1px;
+    cursor: pointer;
+  }
+  
+  .custom-web3-button.web3-button:hover {
+    /* Add your custom hover styles here */
+    background-color: darkblue;
+  }
+  
+  .custom-container {
+    margin-bottom: 1rem; /* Adjust the value to reduce the gap */
+  }
+
+  .countdown-timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Dangrek', Arial, sans-serif; /* Updated font family */
+    font-size: 1.0rem;
+    background-color: #fafafa;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+
+  .countdown-timer span {
+    margin: 0 0.5rem;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.98rem; /* Updated font size */
+  }
+
+  .countdown-timer .timer-value {
+    color: #007bff;
+  }
+  
+
+  .mint-button {
+    background-color: #0f0;
+    color: rgb(130, 11, 11);
+    box-shadow: 0 0 10px rgb(131, 9, 78), 0 0 20px #0f0, 0 0 30px #0f0, 0 0 40px #0f0;
+    transition: all 0.3s ease; /* Add transition for smooth hover effect */
+    font-family: 'Graduate', sans-serif; /* Add the font-family property */
+  }
+  .mint-button:hover {
+    background: #b10eac;
+    color: black;
+    box-shadow: 0 0 10px #bc58c9, 0 0 20px #d4aada, 0 0 30px #d2b0d8, 0 0 40px #d5aed4; /* Change neon color on hover */
+  }
+  
+  .mint-button:active {
+    background: #0d0843;
+    color: black;
+    box-shadow: 0 0 10px #bc58c9, 0 0 20px #d4aada, 0 0 30px #d2b0d8, 0 0 40px #d5aed4; /* Change neon color on hover */
+  }
+  .mint-text {
+    color: rgb(82, 12, 81);
+  }
+}
+
+@font-face {
+  font-family: 'BadBoyzFont';
+  src: url('../styles/Parkinson_-_Amboy-Black.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IronmanFont';
+  src: url('../styles/iron-man-of-war-2-ncv-font/IronManOfWar2Ncv-E85l.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MarvelFont';
+  src: url('../styles/marvel-font/MarvelRegular-Dj83.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DeadpoolFont';
+  src: url('../styles/deadpool-movie-font/DeadpoolMovie-9AzL.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AmericancaptainFont';
+  src: url('../styles/american-captain-font/AmericanCaptain-MdEY.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NationalChampion-Bold';
+  src: url('../styles/NationalChampion-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Anton';
+  src: url('../styles/Anton/Anton-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Dangrek';
+  src: url('../styles/Dangrek/Dangrek-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Graduate';
+  src: url('../styles/Graduate/Graduate-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@keyframes neon-glow {
+  from {
+    text-shadow: 0 0 20px #961535, 0 0 40px #e42a8d, 0 0 60px #b01675, 0 0 80px #ea18a1;
+  }
+  to {
+    text-shadow: 0 0 20px #1e0792, 0 0 40px #220e69, 0 0 60px #391cda, 0 0 80px #0d0d55;
+  }
+}
+.pulse-neon {
+  animation: neon-glow 0.125s ease-in-out infinite alternate;
+}
+
+html,
+body {
+  font-family: 'Helvetica', sans-serif,'BadBoyzFont';
+  font-weight: bold;
+}
+
+
+a {
+  color: #7dd3fc;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+}
+body {
+  @apply min-h-screen-safe bg-black text-white;
+}
