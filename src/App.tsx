@@ -21,7 +21,7 @@ import { parseIneligibility } from './utils/parseIneligibility';
 import { useToast } from './hooks/useToast';
 //import presale1CSV from "./presale1.csv";
 import { useEffect } from 'react';
-import Timer from "./components/timer";
+import Timer from "./components/Timer";
 import BADBOYZ from "./images/BADBOYZ.png";
 
 const urlParams = new URL(window.location.toString()).searchParams;
